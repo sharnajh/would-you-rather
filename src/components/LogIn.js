@@ -14,11 +14,11 @@ import {
   Alert,
   Modal,
   ModalHeader,
-  ModalBody
+  ModalBody,
+  CardFooter
 } from "reactstrap";
 import avatar from "../images/avatar.jpg";
 import SignUp from "./SignUp";
-
 
 class LogIn extends Component {
   state = {
@@ -126,24 +126,24 @@ class LogIn extends Component {
                 Log In
               </Button>
             </Form>
-            <p className="text-center">or</p>
            
-              <Button color="success" onClick={this.toggleModal} block>
-                Sign Up
-              </Button>
-              <Modal
-                isOpen={modal}
-                modalTransition={{ timeout: 100 }}
-                backdropTransition={{ timeout: 100 }}
-                toggle={this.toggleModal}
-              >
-                <ModalHeader toggle={this.toggleModal}>Sign Up</ModalHeader>
-                <ModalBody>
-                  <SignUp />
-                </ModalBody>
-              </Modal>
-        
           </CardBody>
+          <CardFooter>
+            <Button color="success" onClick={this.toggleModal} block>
+              Sign Up
+            </Button>
+          </CardFooter>
+          <Modal
+            isOpen={modal}
+            modalTransition={{ timeout: 100 }}
+            backdropTransition={{ timeout: 100 }}
+            toggle={this.toggleModal}
+          >
+            <ModalHeader toggle={this.toggleModal}>Sign Up</ModalHeader>
+            <ModalBody>
+              <SignUp />
+            </ModalBody>
+          </Modal>
         </Card>
       </div>
     );

@@ -52,7 +52,7 @@ class LogIn extends Component {
           <CardBody>
             {callback !== null && callback !== "/" && (
               <Alert color="warning" className="text-center">
-                Please log in first.
+                Please log in first before attempting to view page at "{callback}"
               </Alert>
             )}
             <div className="justify-flex">

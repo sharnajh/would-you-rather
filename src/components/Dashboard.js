@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Question from "./Question";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { Nav, NavItem, NavLink, TabContent, TabPane, Card } from "reactstrap";
+import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
 import classnames from "classnames";
 
 class Dashboard extends Component {
@@ -34,7 +33,8 @@ class Dashboard extends Component {
           <div
             className="user-icon"
             style={{
-              backgroundImage: `url(${user.avatarURL})`
+              backgroundImage: `url(${user.avatarURL})`,
+              margin: "10px"
             }}
           />
           Hi {user ? user.name : null}!
@@ -69,16 +69,9 @@ class Dashboard extends Component {
 
         <TabContent activeTab={activeTab}>
           <TabPane tabId="unanswered">
-            {unanswered.length <= 0 ? (
-              <Card className="text-center">
-                <h3>You've answered everything! </h3>
-                <h3>
-                  <Link to="/add">Try creating a new question.</Link>
-                </h3>
-              </Card>
-            ) : (
-              unanswered.map(qid => <Question qid={qid} key={qid} />)
-            )}
+            {unanswered.map(qid => (
+              <Question qid={qid} key={qid} />
+            ))}
           </TabPane>
           <TabPane tabId="answered">
             {answered.map(qid => (

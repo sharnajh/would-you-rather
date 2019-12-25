@@ -127,7 +127,7 @@ class LogIn extends Component {
               </Button>
             </Form>
             <p className="text-center">or</p>
-            <div>
+           
               <Button color="success" onClick={this.toggleModal} block>
                 Sign Up
               </Button>
@@ -142,7 +142,7 @@ class LogIn extends Component {
                   <SignUp />
                 </ModalBody>
               </Modal>
-            </div>
+        
           </CardBody>
         </Card>
       </div>

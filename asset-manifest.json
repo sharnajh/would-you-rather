@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/would-you-rather/static/css/main.69d5f4d9.chunk.css",
-    "main.js": "/would-you-rather/static/js/main.455dc6f7.chunk.js",
-    "main.js.map": "/would-you-rather/static/js/main.455dc6f7.chunk.js.map",
+    "main.js": "/would-you-rather/static/js/main.adc4b7cd.chunk.js",
+    "main.js.map": "/would-you-rather/static/js/main.adc4b7cd.chunk.js.map",
     "runtime-main.js": "/would-you-rather/static/js/runtime-main.48c27b57.js",
     "runtime-main.js.map": "/would-you-rather/static/js/runtime-main.48c27b57.js.map",
     "static/css/2.17e5ed98.chunk.css": "/would-you-rather/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.dcf14089.chunk.js": "/would-you-rather/static/js/2.dcf14089.chunk.js",
-    "static/js/2.dcf14089.chunk.js.map": "/would-you-rather/static/js/2.dcf14089.chunk.js.map",
+    "static/js/2.f3227583.chunk.js": "/would-you-rather/static/js/2.f3227583.chunk.js",
+    "static/js/2.f3227583.chunk.js.map": "/would-you-rather/static/js/2.f3227583.chunk.js.map",
     "index.html": "/would-you-rather/index.html",
-    "precache-manifest.a741a08fe432f6ed51333a61f7fbaf15.js": "/would-you-rather/precache-manifest.a741a08fe432f6ed51333a61f7fbaf15.js",
+    "precache-manifest.6454f28bd74faef6ad12a6fda13b2ed2.js": "/would-you-rather/precache-manifest.6454f28bd74faef6ad12a6fda13b2ed2.js",
     "service-worker.js": "/would-you-rather/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/would-you-rather/static/css/2.17e5ed98.chunk.css.map",
     "static/css/main.69d5f4d9.chunk.css.map": "/would-you-rather/static/css/main.69d5f4d9.chunk.css.map",
-    "static/js/2.dcf14089.chunk.js.LICENSE": "/would-you-rather/static/js/2.dcf14089.chunk.js.LICENSE",
+    "static/js/2.f3227583.chunk.js.LICENSE": "/would-you-rather/static/js/2.f3227583.chunk.js.LICENSE",
     "static/media/app.css": "/would-you-rather/static/media/avatar.d5f51047.jpg",
     "static/media/john-doe.png": "/would-you-rather/static/media/john-doe.528ddb19.png",
     "static/media/sarah-hedo.jpg": "/would-you-rather/static/media/sarah-hedo.c67fb091.jpg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.48c27b57.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.dcf14089.chunk.js",
+    "static/js/2.f3227583.chunk.js",
     "static/css/main.69d5f4d9.chunk.css",
-    "static/js/main.455dc6f7.chunk.js"
+    "static/js/main.adc4b7cd.chunk.js"
   ]
 }

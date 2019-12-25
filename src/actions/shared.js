@@ -58,7 +58,7 @@ export function handleAnswerQuestion({ qid, answer }) {
       qid,
       answer
     };
-    saveQuestionAnswer(info).then(() => {
+    return saveQuestionAnswer(info).then(() => {
       dispatch(answerQuestion({ authedUser, qid, answer }));
       dispatch(addAnswerToUser({ authedUser, qid, answer }));
     });

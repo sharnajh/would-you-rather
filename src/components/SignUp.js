@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 import avatar from "../images/avatar.jpg";
 import { handleAddUser } from "../actions/shared";
-import { setAuthedUser } from "../actions/authedUser";
 
 class SignUp extends Component {
   state = {

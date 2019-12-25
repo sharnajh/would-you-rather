@@ -9,8 +9,7 @@ class UserInfo extends Component {
       user,
       name,
       username,
-      score,
-      timePosted
+      score
     } = this.props;
 
     return (

@@ -12,6 +12,7 @@ import NavComp from "./Nav";
 import PrivateRoute from "./PrivateRoute";
 import AccessDenied from "./AccessDenied";
 import "../app.css";
+import LoadingBar from 'react-redux-loading-bar'
 
 class App extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ class App extends Component {
     const { user, authedUser } = this.props;
     return (
       <div>
+        <LoadingBar style={{ position: "relative" }} />
         {user ? (
           <NavComp history={this.props.history} />
         ) : (

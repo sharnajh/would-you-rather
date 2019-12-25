@@ -53,6 +53,7 @@ class NewQuestion extends Component {
   };
   render() {
     const { optionOneText, optionTwoText } = this.state;
+    const { loadingBar } = this.props
     return (
       <Form onSubmit={this.handleSubmit}>
         <Card>
@@ -97,7 +98,7 @@ class NewQuestion extends Component {
             </InputGroup>
 
             <Button
-              disabled={optionTwoText === "" || optionOneText === ""}
+              disabled={optionTwoText === "" || optionOneText === "" || loadingBar.default === 1}
               type="submit"
               className="margin"
               color="success"
@@ -113,9 +114,10 @@ class NewQuestion extends Component {
   }
 }
 
-function mapStateToProps({ authedUser }) {
+function mapStateToProps({ authedUser, loadingBar }) {
   return {
-    authedUser
+    authedUser,
+    loadingBar
   };
 }
 

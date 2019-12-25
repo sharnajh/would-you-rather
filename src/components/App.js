@@ -23,7 +23,9 @@ class App extends Component {
     const { user, authedUser } = this.props;
     return (
       <div>
-        <LoadingBar style={{ position: "relative" }} />
+        <LoadingBar style={{ 
+          position: "fixed", 
+          zIndex: "90000" }} />
         {user ? (
           <NavComp history={this.props.history} />
         ) : (

@@ -24,7 +24,7 @@ class Unanswered extends Component {
 
   render() {
     const { selectedOption } = this.state;
-    const { question } = this.props;
+    const { question, loadingBar } = this.props;
     return (
       <div>
         <FormGroup tag="fieldset">
@@ -54,7 +54,7 @@ class Unanswered extends Component {
 
         <Button
           color="success"
-          disabled={selectedOption === ""}
+          disabled={selectedOption === "" || loadingBar.default === 1}
           onClick={this.handleSubmit}
           size="md"
           block
@@ -66,4 +66,10 @@ class Unanswered extends Component {
   }
 }
 
-export default connect()(Unanswered);
+function mapStateToProps({ loadingBar }) {
+  return {
+    loadingBar
+  }
+}
+
+export default connect(mapStateToProps)(Unanswered);

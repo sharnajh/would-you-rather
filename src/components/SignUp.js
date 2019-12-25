@@ -54,7 +54,7 @@ class SignUp extends Component {
 
   render() {
     const { id, firstname, lastname, avatarURL } = this.state;
-    const { users } = this.props;
+    const { users, loadingBar } = this.props;
     return (
       <Form onSubmit={this.handleSubmit}>
         <div className="justify-flex">
@@ -123,7 +123,8 @@ class SignUp extends Component {
             firstname === "" ||
             lastname === "" ||
             avatarURL === "" ||
-            users.includes(id)
+            users.includes(id) ||
+            loadingBar.default === 1
           }
           type="submit"
           color="success"
@@ -136,9 +137,10 @@ class SignUp extends Component {
   }
 }
 
-function mapStateToProps({ users }) {
+function mapStateToProps({ users, loadingBar }) {
   return {
-    users: Object.keys(users)
+    users: Object.keys(users),
+    loadingBar
   };
 }
 

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/sharnajh/would-you-rather/static/css/main.eb06a0af.chunk.css",
+    "main.js": "/sharnajh/would-you-rather/static/js/main.aa49f87d.chunk.js",
+    "main.js.map": "/sharnajh/would-you-rather/static/js/main.aa49f87d.chunk.js.map",
+    "runtime-main.js": "/sharnajh/would-you-rather/static/js/runtime-main.ab1513d5.js",
+    "runtime-main.js.map": "/sharnajh/would-you-rather/static/js/runtime-main.ab1513d5.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/sharnajh/would-you-rather/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.29302801.chunk.js": "/sharnajh/would-you-rather/static/js/2.29302801.chunk.js",
+    "static/js/2.29302801.chunk.js.map": "/sharnajh/would-you-rather/static/js/2.29302801.chunk.js.map",
+    "index.html": "/sharnajh/would-you-rather/index.html",
+    "precache-manifest.e225c049e62a43e23e992edac69147ce.js": "/sharnajh/would-you-rather/precache-manifest.e225c049e62a43e23e992edac69147ce.js",
+    "service-worker.js": "/sharnajh/would-you-rather/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/sharnajh/would-you-rather/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.eb06a0af.chunk.css.map": "/sharnajh/would-you-rather/static/css/main.eb06a0af.chunk.css.map",
+    "static/js/2.29302801.chunk.js.LICENSE": "/sharnajh/would-you-rather/static/js/2.29302801.chunk.js.LICENSE",
+    "static/media/app.css": "/sharnajh/would-you-rather/static/media/avatar.d5f51047.jpg",
+    "static/media/john-doe.png": "/sharnajh/would-you-rather/static/media/john-doe.528ddb19.png",
+    "static/media/sarah-hedo.jpg": "/sharnajh/would-you-rather/static/media/sarah-hedo.c67fb091.jpg",
+    "static/media/tyler-mcginnis.jpg": "/sharnajh/would-you-rather/static/media/tyler-mcginnis.ab3a62a2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab1513d5.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.29302801.chunk.js",
+    "static/css/main.eb06a0af.chunk.css",
+    "static/js/main.aa49f87d.chunk.js"
+  ]
+}

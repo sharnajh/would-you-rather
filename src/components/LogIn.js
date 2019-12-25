@@ -11,15 +11,22 @@ import {
   Form,
   CardBody,
   CardHeader,
-  Alert
+  Alert,
+  Modal,
+  ModalHeader,
+  ModalBody
 } from "reactstrap";
+import avatar from "../images/avatar.jpg";
+import SignUp from "./SignUp";
+
 
 class LogIn extends Component {
   state = {
     selectedUser: "",
-    dropdownOpen: false
+    dropdownOpen: false,
+    modal: false
   };
-  handleNewUser(e) {
+  handleSignIn(e) {
     e.preventDefault();
     const { dispatch, callback, history } = this.props;
     dispatch(setAuthedUser(this.state.selectedUser));
@@ -27,7 +34,7 @@ class LogIn extends Component {
       history.push(callback);
     }
   }
-  setNewUser(e) {
+  setSignIn(e) {
     e.preventDefault();
     this.setState({
       selectedUser: e.target.value
@@ -38,9 +45,15 @@ class LogIn extends Component {
       dropdownOpen: !prev.dropdownOpen
     }));
   };
+
+  toggleModal = () => {
+    this.setState(prev => ({
+      modal: !prev.modal
+    }));
+  };
   render() {
     const { users, callback } = this.props;
-    const { selectedUser } = this.state;
+    const { selectedUser, modal } = this.state;
     return (
       <div className="dashboard">
         <Card>
@@ -51,8 +64,9 @@ class LogIn extends Component {
           </CardHeader>
           <CardBody>
             {callback !== null && callback !== "/" && (
-              <Alert color="warning" className="text-center">
-                Please log in first before attempting to view page at "{callback}"
+              <Alert color="danger" className="text-center">
+                Please log in first before attempting to view page at "
+                {callback}"
               </Alert>
             )}
             <div className="justify-flex">
@@ -61,7 +75,7 @@ class LogIn extends Component {
                 style={{
                   backgroundImage: `url(${
                     this.state.selectedUser === ""
-                      ? "https://exelord.com/ember-initials/images/default-d5f51047d8bd6327ec4a74361a7aae7f.jpg"
+                      ? avatar
                       : users[this.state.selectedUser].avatarURL
                   })`,
                   width: "150px",
@@ -76,7 +90,7 @@ class LogIn extends Component {
                 )}
               </h4>
             </div>
-            <Form onSubmit={e => this.handleNewUser(e)}>
+            <Form onSubmit={e => this.handleSignIn(e)}>
               <Dropdown
                 group
                 isOpen={this.state.dropdownOpen}
@@ -92,7 +106,7 @@ class LogIn extends Component {
                     ? Object.keys(users).map(username => (
                         <div key={username}>
                           <DropdownItem
-                            onClick={e => this.setNewUser(e)}
+                            onClick={e => this.setSignIn(e)}
                             value={username}
                           >
                             {users[username].name}
@@ -112,6 +126,23 @@ class LogIn extends Component {
                 Log In
               </Button>
             </Form>
+            <p className="text-center">or</p>
+            <div>
+              <Button color="success" onClick={this.toggleModal} block>
+                Sign Up
+              </Button>
+              <Modal
+                isOpen={modal}
+                modalTransition={{ timeout: 100 }}
+                backdropTransition={{ timeout: 100 }}
+                toggle={this.toggleModal}
+              >
+                <ModalHeader toggle={this.toggleModal}>Sign Up</ModalHeader>
+                <ModalBody>
+                  <SignUp />
+                </ModalBody>
+              </Modal>
+            </div>
           </CardBody>
         </Card>
       </div>

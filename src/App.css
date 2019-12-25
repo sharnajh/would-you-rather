@@ -24,7 +24,7 @@ body .user-icon {
   background-size: cover;
   border-radius: 50%;
   margin-right: 10px;
-  background-image: url("https://exelord.com/ember-initials/images/default-d5f51047d8bd6327ec4a74361a7aae7f.jpg");
+  background-image: url("./images/avatar.jpg");
 }
 
 body .flex {
@@ -50,6 +50,8 @@ body .justify-flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 body .margin {

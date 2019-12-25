@@ -38,4 +38,3 @@ export function answerQuestion({ qid, authedUser, answer }) {
     answer
   };
 }
-

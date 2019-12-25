@@ -44,11 +44,11 @@ class NewQuestion extends Component {
     const author = authedUser;
     dispatch(handleAddQuestion(optionOneText, optionTwoText, author)).then(
       res => {
-        const qid = res.question.id;
         this.setState(() => ({
           optionOneText: "",
           optionTwoText: ""
         }));
+        const qid = res.question.id;
         dispatch(addQuestionToUser(qid, authedUser));
         history.push(`/`);
       }

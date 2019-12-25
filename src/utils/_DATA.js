@@ -1,11 +1,12 @@
-import avatar from "./avatars/avatar.png";
+import johndoe from "./avatars/john-doe.png";
+import sarahedo from "./avatars/sarah-hedo.jpg";
+import tylermcginnis from "./avatars/tyler-mcginnis.jpg";
 
 let users = {
   sarahedo: {
     id: "sarahedo",
     name: "Sarah Edo",
-    avatarURL:
-      "https://i.kym-cdn.com/entries/icons/mobile/000/031/843/salamicat.jpg",
+    avatarURL: sarahedo,
     answers: {
       "8xf0y6ziyjabvozdd253nd": "optionOne",
       "6ni6ok3ym7mf1p33lnez": "optionTwo",
@@ -17,8 +18,7 @@ let users = {
   tylermcginnis: {
     id: "tylermcginnis",
     name: "Tyler McGinnis",
-    avatarURL:
-      "https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555927957/shape/mentalfloss/565grumpycat1_5.jpg",
+    avatarURL: tylermcginnis,
     answers: {
       vthrdm985a262al8qx3do: "optionOne",
       xj352vofupe1dqz9emx13r: "optionTwo"
@@ -28,7 +28,7 @@ let users = {
   johndoe: {
     id: "johndoe",
     name: "John Doe",
-    avatarURL: avatar,
+    avatarURL: johndoe,
     answers: {
       xj352vofupe1dqz9emx13r: "optionOne",
       vthrdm985a262al8qx3do: "optionTwo",
@@ -209,5 +209,28 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
 
       res();
     }, 500);
+  });
+}
+
+function formatUser({ id, name, avatarURL }) {
+  return {
+    id,
+    name,
+    avatarURL,
+    answers: {},
+    questions: []
+  };
+}
+
+export function _saveUser(user) {
+  return new Promise((res, rej) => {
+    const formattedUser = formatUser(user);
+    setTimeout(() => {
+      users = {
+        ...users,
+        [formattedUser.id]: formattedUser
+      };
+      res(formattedUser);
+    }, 1000);
   });
 }

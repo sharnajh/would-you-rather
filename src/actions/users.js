@@ -1,5 +1,3 @@
-import { saveUser } from "../utils/api";
-
 export const RECEIVE_USERS = "RECEIVE_USERS";
 export const ADD_ANSWER_TO_USER = "ADD_ANSWER_TO_USER";
 export const ADD_QUESTION_TO_USER = "ADD_QUESTION_TO_USER";
@@ -29,21 +27,9 @@ export function addQuestionToUser(qid, authedUser) {
   };
 }
 
-function addUser(user) {
+export function addUser(user) {
   return {
     type: ADD_USER,
     user
-  };
-}
-
-export function handleAddUser(id, name, avatarURL) {
-  return dispatch => {
-    return saveUser({
-      id,
-      name,
-      avatarURL
-    }).then(user => {
-      dispatch(addUser(user))
-    })
   };
 }

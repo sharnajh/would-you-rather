@@ -12,7 +12,7 @@ import {
   FormFeedback
 } from "reactstrap";
 import avatar from "../images/avatar.jpg";
-import { handleAddUser } from "../actions/users";
+import { handleAddUser } from "../actions/shared";
 import { setAuthedUser } from "../actions/authedUser";
 
 class SignUp extends Component {
@@ -50,11 +50,7 @@ class SignUp extends Component {
     const { dispatch } = this.props;
     const { id, firstname, lastname, avatarURL } = this.state;
     const name = firstname + " " + lastname;
-    console.log(id, name, avatarURL);
-    dispatch(handleAddUser(id, name, avatarURL)).then(res => {
-      const user = res.user;
-      dispatch(setAuthedUser(user.id));
-    });
+    dispatch(handleAddUser(id, name, avatarURL));
   };
 
   render() {
@@ -82,7 +78,7 @@ class SignUp extends Component {
               onChange={e => this.handleId(e)}
               invalid={users.includes(id)}
             />
-            <FormFeedback invalid>
+            <FormFeedback>
               Username "{id}" is already taken.
             </FormFeedback>
           </InputGroup>

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { handleAddQuestion } from "../actions/questions";
-import { addQuestionToUser } from "../actions/users";
 import {
   Card,
   Button,
@@ -16,6 +14,7 @@ import {
   Badge
 } from "reactstrap";
 import UserInfo from "./UserInfo";
+import { handleAddQuestion } from "../actions/shared"
 
 class NewQuestion extends Component {
   state = {
@@ -48,8 +47,6 @@ class NewQuestion extends Component {
           optionOneText: "",
           optionTwoText: ""
         }));
-        const qid = res.question.id;
-        dispatch(addQuestionToUser(qid, authedUser));
         history.push(`/`);
       }
     );

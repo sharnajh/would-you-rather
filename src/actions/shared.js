@@ -1,8 +1,8 @@
-import { getInitialData, saveQuestionAnswer } from "../utils/api";
+import { getInitialData, saveQuestionAnswer, saveUser, saveQuestion } from "../utils/api";
 import { receiveUsers } from "./users";
-import { receiveQuestions, answerQuestion } from "./questions";
+import { receiveQuestions, answerQuestion, addQuestion } from "./questions";
 import { setAuthedUser, unsetAuthedUser } from "./authedUser";
-import { addAnswerToUser } from "./users";
+import { addAnswerToUser, addUser, addQuestionToUser } from "./users";
 import { setCallbackLink, unsetCallbackLink } from "./callback";
 
 export function handleInitialData(pathname) {
@@ -16,10 +16,37 @@ export function handleInitialData(pathname) {
   };
 }
 
+export function handleAddUser(id, name, avatarURL) {
+  return dispatch => {
+    return saveUser({
+      id,
+      name,
+      avatarURL
+    }).then(user => {
+      dispatch(addUser(user))
+      dispatch(setAuthedUser(user.id))
+    })
+  };
+}
+
 export function handleUninitializeData() {
   return dispatch => {
     dispatch(unsetCallbackLink());
     dispatch(unsetAuthedUser());
+  };
+}
+
+export function handleAddQuestion(optionOneText, optionTwoText) {
+  return (dispatch, getState) => {
+    const { authedUser } = getState();
+    return saveQuestion({
+      optionOneText,
+      optionTwoText,
+      author: authedUser
+    }).then(question => {
+      dispatch(addQuestion(question))
+      dispatch(addQuestionToUser(question.id, authedUser))
+    });
   };
 }
 
@@ -37,3 +64,4 @@ export function handleAnswerQuestion({ qid, answer }) {
     });
   };
 }
+

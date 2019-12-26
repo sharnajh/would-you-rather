@@ -13,26 +13,22 @@ npm start
 
 ## Usage
 
-MyReads fetches data from [Udacity's React Books API](https://reactnd-books-api.udacity.com/) to connect the user with an expansive library of books.
-
-The user can search for books and organize them into three different bookshelves:
-
-- Currently Reading
-- Want to Read
-- Read
+Users can sign up or impersonate a fake user to log in. Once logged in, users can answer polls, view poll results, create their own polls for others to answer, and view the leaderboard.
 
 ## Technologies
 
 - Bootstrapped with create-react-app
 - React-Redux for state management
-- Styled with SASS
+- Styled with SASS and Reactstrap
 - Routed with React Router DOM in Development
+- React-Redux-Loading-Bar for loading middleware
+- JavaScript TimeAgo library for rendering timestamps
 
 ## Future Functionality
 
-- Sign up users
-- Loading bar
-- 
+- Sign up users[x]
+- Loading bar[x]
+- Authentication[]
 
 ## License
 

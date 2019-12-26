@@ -21,7 +21,8 @@ Users can sign up or impersonate a fake user to log in. Once logged in, users ca
 - React-Redux for state management
 - Styled with SASS and Reactstrap
 - Routed with React Router DOM in Development
-- React-Redux-Loading-Bar for loading middleware
+- History for route management
+- React-Redux-Loading-Bar for loading middleware (Thunk)
 - JavaScript TimeAgo library for rendering timestamps
 
 ## Future Functionality

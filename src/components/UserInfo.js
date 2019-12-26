@@ -9,7 +9,7 @@ const timeAgo = new TimeAgo("en-US");
 
 class UserInfo extends Component {
   render() {
-    const { user, name, username, score, posted } = this.props;
+    const { user, name, username, score, posted, qid } = this.props;
 
     return (
       <CardHeader className="flex">
@@ -20,7 +20,7 @@ class UserInfo extends Component {
           }}
         />
         <div className="user-info">
-          {username} @{name} • {posted}
+          <span>{username} @{name} {qid && <span>• {posted}</span>}</span>
           <br />
           <Badge color="info">Score: {score}</Badge>{" "}
         </div>

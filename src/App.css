@@ -16,6 +16,15 @@ body .card {
   width: 500px;
 }
 
+@media only screen and (max-width: 600px) {
+  body body .card {
+    width: 200px;
+  }
+  body body .dashboard .card {
+    width: 200px;
+  }
+}
+
 body .user-icon {
   width: 50px;
   display: inline-block;

@@ -11,7 +11,7 @@ import QuestionPage from "./QuestionPage";
 import NavComp from "./Nav";
 import PrivateRoute from "./PrivateRoute";
 import AccessDenied from "./AccessDenied";
-import "../app.css";
+import "../App.css";
 import LoadingBar from 'react-redux-loading-bar'
 
 class App extends Component {

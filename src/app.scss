@@ -12,7 +12,14 @@ body {
   .card {
     width: 500px;
   }
-  
+  @media only screen and (max-width: 600px) {
+    body .card {
+      width: 200px;
+    }
+    body .dashboard .card {
+      width: 200px;
+    }
+  }
   .user-icon {
     width: 50px;
     display: inline-block;

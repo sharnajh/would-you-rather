@@ -40,7 +40,7 @@ class Dashboard extends Component {
           Hi {user ? user.name : null}!
         </h3>
 
-        <Nav tabs>
+        <Nav className="dash-tabs" tabs>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === "unanswered" })}

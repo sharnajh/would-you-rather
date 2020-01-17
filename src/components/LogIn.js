@@ -55,7 +55,7 @@ class LogIn extends Component {
     const { users, callback } = this.props;
     const { selectedUser, modal } = this.state;
     return (
-      <div className="dashboard">
+      <div className="dashboard" style={{ height: "100vh" }}>
         <Card>
           <CardHeader>
             <div className="text-center">

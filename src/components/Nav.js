@@ -34,10 +34,10 @@ class NavComp extends Component {
     return (
       <div>
         <Navbar color="light" light expand="lg">
-          <NavbarBrand onClick={() => this.handleHistory("/")}>Would You Rather?</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <NavbarBrand style={{ cursor: "pointer" }} onClick={() => this.handleHistory("/")}>Would You Rather?</NavbarBrand>
+          <NavbarToggler style={{ cursor: "pointer" }} onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="mr-auto" navbar>
+            <Nav style={{ cursor: "pointer" }} className="mr-auto" navbar>
               <NavItem onClick={() => this.handleHistory("/")}>
                 <NavLink>Dashboard</NavLink>
               </NavItem>

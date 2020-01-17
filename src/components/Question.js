@@ -14,7 +14,7 @@ class Question extends Component {
           <UserInfo qid={qid} />
         <CardBody>
           <QuestionInfo qid={qid} />
-          <Link to={`/questions/${qid}`}>
+          <Link to={`/would-you-rather/questions/${qid}`}>
             <Button color={answerCheck ? "info" : "primary"} size="md" block>
               {answerCheck ? "View Question" : "Answer Question"}
             </Button>

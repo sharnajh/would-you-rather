@@ -47,7 +47,7 @@ class NewQuestion extends Component {
           optionOneText: "",
           optionTwoText: ""
         }));
-        history.push(`/`);
+        history.push(`/would-you-rather`);
       }
     );
   };

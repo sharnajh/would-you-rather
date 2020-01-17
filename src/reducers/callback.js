@@ -5,7 +5,7 @@ export default function callback(state = null, action) {
     case SET_CALLBACK_LINK:
       return action.callback;
     case UNSET_CALLBACK_LINK:
-      return "/"
+      return "/would-you-rather"
     default:
       return state;
   }

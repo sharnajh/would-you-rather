@@ -63,7 +63,7 @@ class LogIn extends Component {
             </div>
           </CardHeader>
           <CardBody>
-            {callback !== null && callback !== "/" && (
+            {callback !== null && callback !== "/would-you-rather/" && (
               <Alert color="danger" className="text-center">
                 Please log in first before attempting to view page at "
                 {callback}"

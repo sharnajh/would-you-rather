@@ -34,14 +34,14 @@ class NavComp extends Component {
     return (
       <div>
         <Navbar color="light" light expand="lg">
-          <NavbarBrand style={{ cursor: "pointer" }} onClick={() => this.handleHistory("/")}>Would You Rather?</NavbarBrand>
+          <NavbarBrand style={{ cursor: "pointer" }} onClick={() => this.handleHistory("/would-you-rather/")}>Would You Rather?</NavbarBrand>
           <NavbarToggler style={{ cursor: "pointer" }} onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav style={{ cursor: "pointer" }} className="mr-auto" navbar>
-              <NavItem onClick={() => this.handleHistory("/")}>
+              <NavItem onClick={() => this.handleHistory("/would-you-rather/")}>
                 <NavLink>Dashboard</NavLink>
               </NavItem>
-              <NavItem onClick={() => this.handleHistory("/leaderboard")}>
+              <NavItem onClick={() => this.handleHistory("/would-you-rather/leaderboard")}>
                 <NavLink>Leaderboard</NavLink>
               </NavItem>
             </Nav>
@@ -62,7 +62,7 @@ class NavComp extends Component {
 
               <DropdownMenu right>
                 <DropdownItem>
-                  <NavItem onClick={() => this.handleHistory("/add")}>
+                  <NavItem onClick={() => this.handleHistory("/would-you-rather/add")}>
                     <NavLink>Create Question</NavLink>
                   </NavItem>
                 </DropdownItem>

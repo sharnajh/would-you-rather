@@ -21,6 +21,7 @@ class App extends Component {
   }
   render() {
     const { user, authedUser } = this.props;
+    console.log(process.env.PUBLIC_URL)
     return (
       <div>
         <LoadingBar style={{ 
@@ -29,29 +30,29 @@ class App extends Component {
         {user ? (
           <NavComp history={this.props.history} />
         ) : (
-          <Route exact path="/" component={LogIn} />
+          <Route exact path={"/would-you-rather"} component={LogIn} />
         )}
         <div className="dashboard">
           <Switch>
             <PrivateRoute
               authedUser={authedUser}
               exact
-              path="/"
+              path={"/would-you-rather"}
               component={Dashboard}
             />
             <PrivateRoute
               authedUser={authedUser}
-              path="/add"
+              path="/would-you-rather/add"
               component={NewQuestion}
             />
             <PrivateRoute
               authedUser={authedUser}
-              path="/leaderboard"
+              path="/would-you-rather/leaderboard"
               component={Leaderboard}
             />
             <PrivateRoute
               authedUser={authedUser}
-              path="/questions/:id"
+              path="/would-you-rather/questions/:id"
               component={QuestionPage}
             />
             <Route location={this.props.location} component={AccessDenied} />

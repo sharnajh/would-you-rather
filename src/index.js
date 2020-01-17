@@ -14,7 +14,7 @@ const store = createStore(reducer, middleware);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
+    <Router basename="/would-you-rather" history={history}>
       <App />
     </Router>
   </Provider>,
